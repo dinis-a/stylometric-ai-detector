@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+dist/
+build/
+*.whl
+
+# Virtual envs
+.venv/
+
+# Testing
+.pytest_cache/
+
+# Project specific
+*.joblib
+upload_to_hf.py
+Makefile
+.env
+stylometry.ipynb
