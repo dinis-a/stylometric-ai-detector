@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stylometric-ai-detector"
-version = "0.2.2"
+version = "0.2.3"
 description = "AI vs Human text detection using stylometric features and Random Forest"
 readme = "README.md"
 license = {file = "LICENSE"}

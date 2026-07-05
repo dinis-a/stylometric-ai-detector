@@ -10,6 +10,8 @@ This library provides two functions:
 
 The model is a Random Forest classifier achieving **96% accuracy**, trained on the [AI vs Human Text](https://www.kaggle.com/datasets/shanegerami/ai-vs-human-text) dataset. On first use, the model is automatically downloaded from Hugging Face and cached locally.
 
+This model serves as a **baseline** for comparison with neural network approache developed as part of another project.
+
 ## Installation
 
 ```bash
