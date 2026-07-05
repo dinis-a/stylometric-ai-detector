@@ -38,8 +38,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/dinis-a/test-stylometry"
-Repository = "https://github.com/dinis-a/test-stylometry"
+Homepage = "https://github.com/dinis-a/stylometric-ai-detector"
+Repository = "https://github.com/dinis-a/stylometric-ai-detector"
 
 [tool.setuptools.packages.find]
 include = ["stylometric_ai_detector*"]
