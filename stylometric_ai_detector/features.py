@@ -1,10 +1,13 @@
 """Stylometric feature extraction for text analysis."""
 
+from __future__ import annotations
+
 import re
 import string
+from typing import Any, Dict, Optional, Union
 
 
-def extract_stylometric_features(text):
+def extract_stylometric_features(text: Optional[Union[str, Any]]) -> Dict[str, float]:
     """Extract 8 stylometric features from a text string.
 
     Features extracted:
@@ -18,7 +21,7 @@ def extract_stylometric_features(text):
         - title_case_count: Number of title-case words
 
     Args:
-        text: Input text string.
+        text: Input text string. Non-string or empty values return all zeros.
 
     Returns:
         dict with keys: char_count, word_count, avg_word_len, punct_count,

@@ -3,9 +3,12 @@
 The model is hosted on Hugging Face and downloaded/cached on first use.
 """
 
+from __future__ import annotations
+
 import logging
 import os
 import warnings
+from typing import Any, Dict, Optional
 
 import joblib
 from huggingface_hub import hf_hub_download
@@ -34,13 +37,16 @@ _CACHE_DIR = os.path.join(os.path.expanduser("~"), ".cache", "stylometric-ai-det
 _model = None
 
 
-def _load_model():
+def _load_model() -> Any:
     """Lazy-load the model, downloading from Hugging Face on first use.
 
     Lookup order:
     1. Package data directory (bundled in wheel / local dev)
     2. User cache directory (~/.cache/stylometric-ai-detector/)
     3. Download from Hugging Face
+
+    Returns:
+        The loaded scikit-learn Random Forest model.
     """
     global _model
     if _model is None:
@@ -72,12 +78,15 @@ def _load_model():
     return _model
 
 
-def _features_to_array(features_dict):
+def _features_to_array(features_dict: Dict[str, float]) -> list[list[float]]:
     """Convert a feature dict to the ordered array expected by the model."""
     return [[features_dict[k] for k in _FEATURE_ORDER]]
 
 
-def predict(text=None, features=None):
+def predict(
+    text: Optional[str] = None,
+    features: Optional[Dict[str, float]] = None,
+) -> Dict[str, object]:
     """Predict whether a text was written by AI or a human.
 
     Provide either `text` (raw string) or `features` (pre-computed feature dict).

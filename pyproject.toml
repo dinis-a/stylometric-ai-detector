@@ -4,18 +4,31 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stylometric-ai-detector"
-version = "0.2.3"
-description = "AI vs Human text detection using stylometric features and Random Forest"
+version = "0.2.4"
+description = "AI vs Human text detection using stylometric features and a Random Forest classifier — a baseline model for benchmarking."
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.9"
 authors = [
-    {name = "Dinis"},
+    {name = "Dinis", email = "akulov.dinis@gmail.com"},
+]
+keywords = [
+    "nlp",
+    "text-classification",
+    "ai-detection",
+    "stylometry",
+    "random-forest",
+    "machine-learning",
+    "baseline",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "Intended Audience :: Education",
     "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
